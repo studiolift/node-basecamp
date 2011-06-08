@@ -2,7 +2,11 @@
   "name": "basecamp",
   "version": "0.1.0",
   "description": "Basecamp API wrapper for Node.js",
-  "keywords": ["api", "wrapper", "basecamp"],
+  "keywords": [
+    "api",
+    "wrapper",
+    "basecamp"
+  ],
   "homepage": "http://github.com/studiolift/node-basecamp",
   "author": {
     "name": "Mike Robinson",
@@ -14,5 +18,6 @@
     "url": "http://github.com/studiolift/node-basecamp.git"
   },
   "dependencies": {
-  }
+  },
+  "engines" : { "node" : ">=0.4.7" },
 }
