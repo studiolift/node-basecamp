@@ -1,5 +1,6 @@
 var https = require('https'),
-    sys = require('sys');
+    sys = require('sys'),
+    xml2js = require('xml2js');
 
 var Basecamp = function(url, key) {
   this.host = url;
@@ -13,10 +14,12 @@ var Basecamp = function(url, key) {
       "getById": function (id, callback) { return self.request('/projects/' + id + '.xml', callback); }
     }
   };
+
   return api;
 };
 
 Basecamp.prototype.request = function(path, callback) {
+  var self = this;
   var options = {
     "host": this.host,
     "path": path,
@@ -30,10 +33,17 @@ Basecamp.prototype.request = function(path, callback) {
   };
 
   var req = https.get(options, function(res) {
+    var xml = '';
     res.setEncoding('utf8');
     res.on('data', function (chunk) {
-      // Parse XML
-      callback(chunk);
+      xml += chunk;
+    }).on('end', function() {
+      sys.log('data received');
+      var parser = new xml2js.Parser();
+      parser.addListener('end', function(result) {
+        callback(result);
+      });
+      parser.parseString(xml);
     });
   });
 };
