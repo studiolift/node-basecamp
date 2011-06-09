@@ -10,7 +10,7 @@ var Basecamp = function(url, key) {
   var api = {
     "projects": {
       "all": function (callback) { return self.request('/projects.xml', callback); },
-      "counts": function (callback) { return self.request('/projects/count.xml', callback); },
+      "count": function (callback) { return self.request('/projects/count.xml', callback); },
       "load": function (id, callback) { return self.request('/projects/' + id + '.xml', callback); }
     },
     "people": {
