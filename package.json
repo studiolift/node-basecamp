@@ -12,7 +12,7 @@
     "name": "Mike Robinson",
     "url": "http://github.com/akamike"
   },
-  "main": "basecamp",
+  "main": "./lib/basecamp",
   "repository": {
     "type": "git",
     "url": "http://github.com/studiolift/node-basecamp.git"
