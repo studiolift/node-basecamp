@@ -72,5 +72,6 @@ A wrapper for the Basecamp API (currently only supports read methods).
 ## TODO
 
 * Write methods
-* Format responses into more useful objects
+* Resource objects for easier manipulation
+* Error handling
 * Publish to npm
