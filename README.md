@@ -46,7 +46,7 @@ A wrapper for the Basecamp API (currently only supports read methods).
 
 ### categories
 
-* `categories.fromProject(projectId, type_[post|attachment]_, callback)`
+* `categories.fromProject(projectId, type, callback)`
 * `categories.load(id, callback)`
 
 ### messages
@@ -59,7 +59,7 @@ A wrapper for the Basecamp API (currently only supports read methods).
 
 ### comments
 
-* `comments.fromResource(resourceType_[posts|milestones|todo\_items]_, resourceId, callback)`
+* `comments.fromResource(resourceType, resourceId, callback)`
 * `comments.load(id, callback)`
 
 ### todoLists
