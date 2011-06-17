@@ -2,6 +2,26 @@
 
 A wrapper for the Basecamp API (currently only supports read methods).
 
+## Example usage
+
+    var http = require('http'),
+        Basecamp = require('./lib/basecamp');
+
+    var bc = new Basecamp(
+      'https://YOUR_COMPANY.basecamphq.com',
+      'API_KEY_HERE'
+    );
+
+    http.createServer(function (req, res) {
+      bc.people.me(function (err, me) {
+        if (err)
+          res.end('Could not load your profile!');
+
+        res.end('You are logged in as ' + me['first-name'] + ' ' + me['last-name']);
+      });
+    }).listen(8080);
+    console.log('Server running at http://localhost:8080/');
+
 ## Supported methods
 
 ### projects
