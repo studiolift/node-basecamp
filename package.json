@@ -20,5 +20,5 @@
   "dependencies": {
     "xml2js" : ">=0.1.8"
   },
-  "engines" : { "node" : ">=0.4.7" },
+  "engines" : { "node" : ">=0.4.7" }
 }
