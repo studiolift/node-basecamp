@@ -17,7 +17,7 @@ A wrapper for the Basecamp API (currently only supports read methods).
         if (err)
           res.end('Could not load your profile!');
 
-        res.end('You are logged in as ' + me['first-name'] + ' ' + me['last-name']);
+        res.end('You are logged in as ' + me.firstName + ' ' + me.lastName);
       });
     }).listen(8080);
     console.log('Server running at http://localhost:8080/');
