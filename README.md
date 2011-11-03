@@ -84,6 +84,7 @@ A wrapper for the Basecamp API (currently only supports read methods).
 
 * `time.fromProject(projectId, callback)`
 * `time.fromTodo(todoId, callback)`
+* `time.report(query, callback)`
 
 ### files
 
