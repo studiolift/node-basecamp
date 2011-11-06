@@ -85,7 +85,8 @@ A wrapper for the Basecamp API (currently only supports read methods).
 * `time.fromProject(projectId, callback)`
 * `time.fromTodo(todoId, callback)`
 * `time.report(options, callback)`
-  * `var options = { "from":"YYYYMMDD", "to":"YYYYMMDD" };`
+  * eg. `var options = { "from":"YYYYMMDD", "to":"YYYYMMDD" };`
+  * full list of options = 'from', 'to', 'subject_id', 'todo_item_id', 'filter_project_id', and 'filter_company_id'
 
 ### files
 
